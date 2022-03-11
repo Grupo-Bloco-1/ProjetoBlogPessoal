@@ -87,7 +87,7 @@ public class UsuarioControllerTest {
 		HttpEntity<Usuario> requisicao = new HttpEntity<Usuario>(usuarioUpdate);
 
 		ResponseEntity<Usuario> resposta = testRestTemplate
-			.withBasicAuth("João Mesquita", "1234")
+			.withBasicAuth("João silva", "1234")
 			.exchange("/usuarios/atualizar", HttpMethod.PUT, requisicao, Usuario.class);
 		
 		//THEN
@@ -106,7 +106,7 @@ public class UsuarioControllerTest {
 		usuarioService.CadastrarUsuario(new Usuario(0L, "Angela Rodrigues",  "angela_rodrigues@email.com.br", "angela123"));
 
 		ResponseEntity<String> resposta = testRestTemplate
-			.withBasicAuth("Samuel", "1234")
+			.withBasicAuth("caique", "1234")
 			.exchange("/usuarios/all", HttpMethod.GET, null, String.class);
 
 		assertEquals(HttpStatus.OK, resposta.getStatusCode());
