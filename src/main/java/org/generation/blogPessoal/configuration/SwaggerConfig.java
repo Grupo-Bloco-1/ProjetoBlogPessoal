@@ -1,6 +1,5 @@
 package org.generation.blogPessoal.configuration;
 
-import org.springdoc.core.customizers.OpenApiCustomiser;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,31 +8,31 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
-import io.swagger.v3.oas.models.responses.ApiResponse;
-import io.swagger.v3.oas.models.responses.ApiResponses;
+//import io.swagger.v3.oas.models.responses.ApiResponse;
+//import io.swagger.v3.oas.models.responses.ApiResponses;
 
 @Configuration
 public class SwaggerConfig {
-	
+
 	@Bean
-	public OpenAPI springBlogPessoalOpenAPI() {
+	public OpenAPI springblogPessoalOpenAPI() {
 		return new OpenAPI()
 				.info(new Info()
 					.title("Projeto Blog Pessoal")
-					.description("Projeto Blog Pessoal - Generation Brasil 2022")
+					.description("API de blog pessoal construído em linguagem Java - Generation Brasil")
 					.version("v0.0.1")
 				.license(new License()
 					.name("Generation Brasil")
 					.url("https://brazil.generation.org/"))
 				.contact(new Contact()
-					.name("Github caique")
+					.name("Projeto de Blog Pessoal - Caique Ramos")
 					.url("https://github.com/caiqueramos08")
 					.email("caique_cerqueiraramos@hotmail.com")))
 				.externalDocs(new ExternalDocumentation()
-					.description("Github Project")
-					.url("https://github.com/caiqueramos08/ProjetoBlogPessoal"));
+					.description("Github")
+					.url("https://github.com/caiqueramos08/ProjetoBlogPessoal.git/"));
 	}
-	
+	/**
 	@Bean
 	public OpenApiCustomiser customerGlobalHeaderOpenApiCustomiser() {
 
@@ -58,6 +57,5 @@ public class SwaggerConfig {
 
 		return new ApiResponse().description(message);
 
-	}
-
-}
+	}*/
+}	
